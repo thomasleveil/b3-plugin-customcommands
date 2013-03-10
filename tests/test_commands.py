@@ -43,20 +43,18 @@ f00 = f00 rcon command
 
     def test_user(self):
         # GIVEN
+        self.console.getPlugin('admin')._warn_command_abusers = True
         self.conf.loadFromString("""
 [user commands]
 # define in this section commands that will be available to all players
 f00 = f00 rcon command
         """)
-        # WHEN
         self.p.onLoadConfig()
         self.p.onStartup()
-        # THEN
-        self.assertIn("f00", self.p._adminPlugin._commands)
         # WHEN
         self.guest.connects(cid="guestCID")
         with patch.object(self.console, "write") as write_mock:
             self.guest.says("!f00")
         # THEN
-        self.assertListEqual([], self.guest.message_history)
-        self.assertListEqual([call("f00 rcon command")], write_mock.mock_calls)
+        self.assertListEqual(['You do not have sufficient access to use !f00'], self.guest.message_history)
+        self.assertListEqual([], write_mock.mock_calls)
