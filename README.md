@@ -203,4 +203,4 @@ Changelog
 [Support]: http://forum.bigbrotherbot.net/plugins-by-courgette/custom-commands/ "Support topic on the B3 forums"
 
 
-[![Build Status](https://secure.travis-ci.org/thomasleveil/b3-plugin-customcommands.png?branch=master)](http://travis-ci.org/thomasleveil/b3-plugin-customcommands)
+[![Build Status](https://travis-ci.org/thomasleveil/b3-plugin-customcommands.png?branch=master)](https://travis-ci.org/thomasleveil/b3-plugin-customcommands)
