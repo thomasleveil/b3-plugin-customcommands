@@ -197,6 +197,10 @@ Changelog
 2013-03-10
 * first release
 
+### 1.1
+2014-04-17
+* fix: do not execute command using FIND_PLAYER if multiple player names match
+
 
 
 [B3]: http://www.bigbrotherbot.net/ "BigBrotherBot (B3)"

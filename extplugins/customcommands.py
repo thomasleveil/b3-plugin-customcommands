@@ -23,7 +23,7 @@ from b3.functions import getStuffSoundingLike
 from b3.plugin import Plugin
 from b3.events import EVT_CLIENT_KILL, EVT_CLIENT_KILL_TEAM
 
-__version__ = '1.0'
+__version__ = '1.1'
 __author__ = 'Courgette'
 
 
@@ -168,7 +168,8 @@ class CustomcommandsPlugin(Plugin):
         except ValueError, err:
             client.message("Error: %s" % err)
         else:
-            self.console.write(rcon_command)
+            if rcon_command:
+                self.console.write(rcon_command)
 
     def _render_cmd_template(self, command_template, data, client):
         command = command_template
@@ -221,6 +222,8 @@ class CustomcommandsPlugin(Plugin):
                 else:
                     raise AssertionError("unsupported placeholder %r" % m.group(0))
                 command = _re_find_player.sub(replacement, command)
+            else:
+                return
 
         # <PLAYER:*>
         command = command.replace("<PLAYER:PID>", client.cid)
