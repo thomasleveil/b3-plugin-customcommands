@@ -56,5 +56,9 @@ f00 = f00 rcon command
         with patch.object(self.console, "write") as write_mock:
             self.guest.says("!f00")
         # THEN
-        self.assertListEqual(['You do not have sufficient access to use !f00'], self.guest.message_history)
+        self.assertEqual(1, len(self.guest.message_history))
+        self.assertIn(self.guest.message_history[0], [
+            'You do not have sufficient access to use !f00',
+            'You need to be in group User to use !f00'
+        ])
         self.assertListEqual([], write_mock.mock_calls)
