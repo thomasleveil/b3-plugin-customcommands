@@ -5,6 +5,9 @@ A [BigBrotherBot][B3] plugin to take easily create new simple commands.
 
 It is a port of the Manu Admin Mod Custom Commands feature to B3.
 
+******
+*NOTE: since B3 v1.10.1 beta this plugin has been included in the standard plugins set, thus all patches and updates will be performed in the official B3 repository.*
+******
 
 Download
 --------
