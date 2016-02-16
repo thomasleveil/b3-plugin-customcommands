@@ -204,6 +204,9 @@ Changelog
 2014-04-17
 * fix: do not execute command using FIND_PLAYER if multiple player names match
 
+### 1.2
+2016-02-16
+* fix: failing to register commands for groups 'regular' and 'moderator' (credits: dilushan)
 
 
 [B3]: http://www.bigbrotherbot.net/ "BigBrotherBot (B3)"

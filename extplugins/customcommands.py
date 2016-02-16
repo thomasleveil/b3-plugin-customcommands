@@ -23,7 +23,7 @@ from b3.functions import getStuffSoundingLike
 from b3.plugin import Plugin
 from b3.events import EVT_CLIENT_KILL, EVT_CLIENT_KILL_TEAM
 
-__version__ = '1.1'
+__version__ = '1.2'
 __author__ = 'Courgette'
 
 
