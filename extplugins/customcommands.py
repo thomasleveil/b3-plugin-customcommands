@@ -57,7 +57,7 @@ class CustomcommandsPlugin(Plugin):
             del self._adminPlugin._commands[cmd_name]
 
         # register our custom commands
-        for group_name in ("guest", "user", "regular", "mod", "admin", "fulladmin", "senioradmin", "superadmin"):
+        for group_name in ("guest", "user", "reg", "mod", "admin", "fulladmin", "senioradmin", "superadmin"):
             if not self.config.has_section("%s commands" % group_name):
                 self.debug("no section [%s commands] found in config file" % group_name)
             else:
